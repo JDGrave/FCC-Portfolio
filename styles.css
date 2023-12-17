@@ -1,0 +1,267 @@
+:root {
+  --pc1: black;
+  --pc2: #eee;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  display: block;
+}
+
+body {
+  font-size: 16px;
+  font-family: arial, sans-serif;
+  background-color: var(--pc2);
+}
+
+#header {
+  width: 100%;
+  height: 70px;
+  background-color: var(--pc2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+}
+
+#logo-bg {
+  background-color: var(--pc1);
+  transform: skew(-40deg, 0deg);
+  margin-left: 40px;
+}
+
+#logo-text {
+  transform: skew(0deg, 0deg);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 23px;
+  color: var(--pc2);
+  font-weight: bold;
+}
+
+#nav-container {
+  margin-right: 15px;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--pc1);
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+#navbar a:hover {
+  background-color: var(--pc1);
+  color: var(--pc2);
+}
+
+#welcome-section {
+  height: calc(100vh - 70px);
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#welcome-text {
+  position: absolute;
+  background-color: var(--pc2);
+  border-radius: 20px;
+  width: 60vw;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+#welcome-section h1 {
+  color: var(--pc1);
+  font-size: 3rem;
+  padding: 10px 20px;
+}
+
+#welcome-section p {
+  font-size: 1.2rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#about,
+#projects {
+  margin: 40px 0;
+  width: 80vw;
+  text-align: center;
+}
+
+.topping {
+  font-size: 3rem;
+  margin: 40px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.project-tile {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#shadow {
+  background-color: grey;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 40px;
+}
+
+#block {
+  width: 400px;
+  height: 400px;
+  background-color: var(--pc1);
+  box-shadow: 2px 2px 5px white;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.image-grid {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#work-grid {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#work-grid a {
+  width: 410px;
+  height: 410px;
+}
+
+#contact {
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--pc1);
+  color: var(--pc2);
+  border-bottom: solid white;
+}
+
+.social-icons {
+  display: grid;
+  font-size: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  width: 80vw;
+  justify-content: center;
+  margin: 20px auto 80px auto;
+}
+
+#contact a {
+  color: var(--pc2);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+#contact a:hover {
+  background-color: var(--pc2);
+  color: var(--pc1);
+}
+
+footer {
+  background-color: var(--pc1);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+footer p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+footer a {
+  color: white;
+}
+
+@media only screen and (max-width: 1500px) {
+  #work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .social-icons {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #work-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #welcome-text h1 {
+    font-size: 2rem;
+  }
+  .social-icons {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .social-icons {
+    font-size: 1rem;
+  }
+}
